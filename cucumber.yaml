@@ -1,3 +1,5 @@
-default: -p bdd -p allure --publish-quiet
+default: -p bdd -p headless -p allure --publish-quiet
 bdd: --format pretty
 allure: --format AllureCucumber::CucumberFormatter --out=logs
+headless: BROWSER=headless
+chrome: BROWSER=chrome

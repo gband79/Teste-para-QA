@@ -3,8 +3,9 @@ Before do
       
     log("\nExecutando o cenário...")
 
-    page.windows[0].maximize
-    visit "https://opentdb.com/"
+    # page.windows[0].maximize
+    # visit "https://opentdb.com/"
+    visit "/"
 end
   
 After do |scenario|
