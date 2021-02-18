@@ -4,9 +4,6 @@ E("pesquisar por categoria") do
     
 end
 
-Então("deve retornar a listagem com 25 itens") do
-    expect(page).to have_selector('tbody > tr', count: 25)
-end
 
 E("exibir o controle de paginação") do
     ctrl_pg = find(".pagination")
@@ -19,3 +16,7 @@ E("exibir o controle de paginação") do
     end
     
 end    
+
+Então("deve retornar a listagem com 25 itens") do
+    expect(page).to have_selector('tbody > tr', count: 25)
+end
