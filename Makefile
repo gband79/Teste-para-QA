@@ -1,5 +1,5 @@
 build:
-	docker build -t rubytester:latest .
+	docker build -t gabriel/testeqa:latest .
 
 start:
 	docker container run rubytester

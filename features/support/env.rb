@@ -16,6 +16,7 @@ BROWSER = ENV['browser']
 Capybara.register_driver :selenium do |app|
     args = if BROWSER.eql?('chrome')
              ['--start-fullscreen']
+            #  ['start-maximized']
            else
               ['--headless', '--no-default-browser-check']
               ['--headless', '--no-default-browser-check', '--no-sandbox']
