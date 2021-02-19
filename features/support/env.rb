@@ -17,7 +17,8 @@ Capybara.register_driver :selenium do |app|
     args = if BROWSER.eql?('chrome')
              ['--start-fullscreen']
            else
-             ['--headless', '--no-default-browser-check']
+              ['--headless', '--no-default-browser-check']
+              ['--headless', '--no-default-browser-check', '--no-sandbox']
            end
   
     Capybara::Selenium::Driver.new(app, browser: :chrome, args: args)

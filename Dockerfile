@@ -1,6 +1,6 @@
 FROM alpine
 ENV BUILD_PACKAGES bash curl-dev ruby-dev build-base
-ENV RUBY_PACKAGES ruby ruby-io-console ruby-bundler
+ENV RUBY_PACKAGES ruby ruby-io-console ruby-bundler ruby-json ruby-bigdecimal
 ENV CHROME chromium chromium-chromedriver
 # Update and install all of the required packages.
 # At the end, remove the apk cache
@@ -14,7 +14,6 @@ RUN mkdir /usr/app
 WORKDIR /usr/app
 COPY Gemfile /usr/app/
 COPY Gemfile.lock /usr/app/
-RUN gem install bundler:1.17.2
 RUN bundle install
 COPY features /usr/app/features
 COPY cucumber.yaml /usr/app/
